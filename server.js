@@ -9,12 +9,10 @@ app.use("/test", testRoute);
 // mongodb+srv://praveen:praveen@cluster0.muc641m.mongodb.net/?retryWrites=true&w=majority
 
 mongoose.connect(
-  "mongodb+srv://praveen:praveen@cluster0.muc641m.mongodb.net/?retryWrites=true&w=majority",
+  "mongodb+srv://travel:travel@travelcluster.nxjdigf.mongodb.net/test",
   () => {
-    console.log("mongodb connected");
+    app.listen(3000, () => {
+      console.log("app is running on port 3000");
+    });
   }
 );
-
-app.listen(3000, () => {
-  console.log("app is running on port 3000");
-});
